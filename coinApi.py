@@ -160,7 +160,7 @@ try:
                 dc.append(d_changeF)
             else:
                 d_change = day_change[v]
-                d_changeF = Fore.RED + '{:,} %'.format(round(h_change, 4)) + Style.RESET_ALL
+                d_changeF = Fore.RED + '{:,}%'.format(round(h_change, 4)) + Style.RESET_ALL
                 dc.append(d_changeF)
 
             w_change = week_change[v]
