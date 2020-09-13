@@ -1,0 +1,7 @@
+btc 2.7
+xrp 3.2
+ETH 5.8
+ltc 32.7
+LINK 31.1
+DOT 15.32
+XMR 100
