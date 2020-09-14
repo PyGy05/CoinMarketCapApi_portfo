@@ -225,16 +225,17 @@ try:
     time_cst = datetime.strptime(time_utc, "%H:%M:%S") - datetime.strptime(st, "%H:%M:%S")
 
     # put date and time back together
-    cst_time_date_string = str(date_from_obj) + "T" + str(time_cst)
+    # TODO: fix time stamp returning at 30:12:000z and throwing error in date:time format
+    # cst_time_date_string = str(date_from_obj) + "T" + str(time_cst)
     # convert back to format computer can reed
-    ctds_convert = datetime.strptime(cst_time_date_string, td_format)
+    # ctds_convert = datetime.strptime(cst_time_date_string, td_format)
     # display it nice for users to read
-    pretty_date_obj = date_obj.strftime("%B %d, %Y at %I:%M %p")
-    pretty_converted_obj = ctds_convert.strftime("%B %d, %Y at %I:%M %p")
+    # pretty_date_obj = date_obj.strftime("%B %d, %Y at %I:%M %p")
+    # pretty_converted_obj = ctds_convert.strftime("%B %d, %Y at %I:%M %p")
 
     print('Total Portfolio Value: ' + Fore.GREEN + '$' + portfolio_value_string + Style.RESET_ALL)
     print()
-    print('API Results Last Updated on: ' + Fore.BLUE + str(pretty_converted_obj) + Style.DIM + Style.RESET_ALL)
+    print('API Results Last Updated on: ' + Fore.BLUE + str(date_obj) + Style.DIM + Style.RESET_ALL)
     print()
 
 except (ConnectionError, Timeout, TooManyRedirects) as e:
